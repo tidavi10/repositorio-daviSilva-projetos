@@ -1,0 +1,97 @@
+
+
+<input type="number" id="PriorddNegcRecbvl" name="PriorddNegcRecbvl" title="Somente Números - max. 1 caracter" placeholder="1" required="" min="1">
+
+<button onclick="totalDeTextBox(document.getElementById('PriorddNegcRecbvl').value)"> Prioridades</button>
+
+<script>
+
+function myFunction() {
+
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("shearchCNPJ");
+filter = input.value.toUpperCase();
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+
+
+
+for (i = 0; i < tr.length; i++) {
+
+  td = tr[i].getElementsByTagName("td")[0];
+
+  if (td) {
+
+    txtValue = td.textContent || td.innerText;
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+      tr[i].style.display = "";
+
+      } else {
+
+      tr[i].style.display = "none";
+
+    }
+  }
+}
+}
+
+</script>
+
+<!--
+
+
+for(var posicao = 0; posicao < totalCaixas; posicao++) {
+    var cont = posicao+1;
+    var elem = document.createElement("label");
+    elem.innerHTML = "Priorirade " + cont;
+    document.getElementsByTagName('body')[0].appendChild(elem);
+    
+    
+    
+    var button = document.createElement("input");
+    button.type = 'number';
+    document.body.appendChild(button);
+    
+    }
+
+
+
+
+
+
+
+
+function myFunction() {
+
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("shearchCNPJ");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+ 
+
+    for (i = 0; i < tr.length; i++) {
+
+      td = tr[i].getElementsByTagName("td")[0];
+
+      if (td) {
+
+        txtValue = td.textContent || td.innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+          tr[i].style.display = "";
+
+          } else {
+
+          tr[i].style.display = "none";
+
+        }
+      }
+    }
+  }
+
+-->
